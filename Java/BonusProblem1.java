@@ -25,43 +25,6 @@ Be aware that boomerangs can overlap, like so:
 [1, 7, 1], [7, 1, 7], and [1, 7, 1]
 
  */
-
-
-/*package Java;
-
-public class BonusProblem1 {
-    public static int NumBoom(int arr[]){
-        int count = 0;
-
-        for (int i = 0; i < arr.length; i = i + 3 ){
-            if ( arr[i] == arr[i + 2] && arr[i] != arr[i + 1] && i + 1 < arr.length && i + 2 < arr.length){
-                count ++;
-            } 
-        }
-        for ( int i = 1; i < arr.length; i = i + 3){
-            if ( arr[i] == arr[i + 2] && arr[i] != arr[i + 1] && i + 1 < arr.length && i + 2 < arr.length){
-                count ++;
-            } 
-        }
-        for ( int i = 2; i < arr.length; i = i + 3){
-            if ( arr[i] == arr[i + 2] && arr[i] != arr[i + 1] && i + 1 < arr.length && i + 2 < arr.length){
-                count ++;
-            } 
-        }
-        return count;
-    }
-
-    public static void main(String[] args){
-        int[] myArray = {9,5,9,5,1,1,1};
-        @SuppressWarnings("unused")
-        BonusProblem1 solution = new BonusProblem1();
-        int result = BonusProblem1.NumBoom(myArray);
-        System.out.println(result);
-    }
-} */
-
-
-
 package Java;
 
 public class BonusProblem1 {
