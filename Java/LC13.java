@@ -28,9 +28,69 @@ C can be placed before D (500) and M (1000) to make 400 and 900.
 Given a roman numeral, convert it to an integer. */
 
 
+import java.util.HashMap;
+import java.util.Scanner;
+
 public class LC13 {
-    public int romanToInt(String s){
-        return 0;
-        
+
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to enter a Roman numeral
+        System.out.print("Enter a Roman numeral: ");
+        String romanNumeral = scanner.nextLine().toUpperCase();  // Convert input to uppercase to handle lowercase input
+
+        // Convert the Roman numeral to an integer
+        int result = romanToInt(romanNumeral);
+
+        // Print the result
+        if (result != -1) {
+            System.out.println("The integer value of the Roman numeral " + romanNumeral + " is: " + result);
+        } else {
+            System.out.println("Invalid Roman numeral input: " + romanNumeral);
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+
+    public static int romanToInt(String s) {
+        // Create a map to store Roman numerals and their corresponding integer values
+        HashMap<Character, Integer> romanMap = new HashMap<>();
+        romanMap.put('I', 1);
+        romanMap.put('V', 5);
+        romanMap.put('X', 10);
+        romanMap.put('L', 50);
+        romanMap.put('C', 100);
+        romanMap.put('D', 500);
+        romanMap.put('M', 1000);
+
+        // Initialize the result integer
+        int result = 0;
+
+        // Iterate through the string from left to right
+        for (int i = 0; i < s.length(); i++) {
+            char currentChar = s.charAt(i);
+
+            // Check if the current character is a valid Roman numeral
+            if (!romanMap.containsKey(currentChar)) {
+                return -1;  // Return -1 to indicate invalid input
+            }
+
+            int currentValue = romanMap.get(currentChar);
+
+            // Check if the next character exists and if it forms a subtractive combination
+            if (i + 1 < s.length() && romanMap.containsKey(s.charAt(i + 1)) && currentValue < romanMap.get(s.charAt(i + 1))) {
+                // Subtractive combination: subtract the current value
+                result -= currentValue;
+            } else {
+                // Normal case: add the current value
+                result += currentValue;
+            }
+        }
+
+        return result;
     }
 }
+
