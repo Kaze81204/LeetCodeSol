@@ -52,6 +52,8 @@ Approaches:
 
 package Java;
 
+import java.util.Arrays;
+
 public class LC75 {
     public static void sortArray(int[] nums){
         int low = 0;
@@ -79,7 +81,10 @@ public class LC75 {
             }
         }
     }
-    
 
-
+    public static void main(String[] args){
+        int arr[] = {1,1,2,0,0,1,2,2,1,0};
+        sortArray(arr);
+        System.out.println("The sorted array is: " + Arrays.toString(arr));
+    }
 }
