@@ -39,7 +39,7 @@ Which is much better than brute force solution.
 
 */
 
-package Java;
+package Java.Medium;
 
 public class LC287 {
     public static int findDuplicate(int[] nums){

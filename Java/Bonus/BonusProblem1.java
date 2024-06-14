@@ -25,7 +25,7 @@ Be aware that boomerangs can overlap, like so:
 [1, 7, 1], [7, 1, 7], and [1, 7, 1]
 
  */
-package Java;
+package Java.Bonus;
 
 public class BonusProblem1 {
     public static int NumBoom(int arr[]){

@@ -50,7 +50,7 @@ Approaches:
 
 
 
-package Java;
+package Java.Medium;
 
 import java.util.Arrays;
 
