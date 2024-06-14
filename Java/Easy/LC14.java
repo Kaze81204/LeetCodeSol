@@ -23,7 +23,7 @@ one.
 
 
 
-package Java;
+package Java.Easy;
 import java.util.Arrays;
 public class LC14 {
     public static String longestCommonPrefix(String[] strs){

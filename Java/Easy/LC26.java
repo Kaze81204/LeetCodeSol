@@ -41,7 +41,7 @@ Approach:
  */
 
 
-package Java;
+package Java.Easy;
 
 public class LC26 {
     public static int[] removeElement(int[] array, int index) {
