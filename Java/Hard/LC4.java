@@ -6,11 +6,7 @@ of the two sorted arrays.
 
 The overall run time complexity should be O(log (m+n)).
 
-
-
-First Thinking process:
-Find the Median of both arrays individually and take the mean of both 
-medians, this will be the required median*/
+*/
 package Java.Hard;
 public class LC4 {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
