@@ -42,7 +42,6 @@ public class LC14 {
         return index == 0 ?"": str1.substring(0, index);
     }
 
-
     public static void main(String[] args){
         String strs[] = {"flower", "flow", "flight"};
         System.out.println(longestCommonPrefix(strs));

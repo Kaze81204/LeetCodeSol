@@ -27,22 +27,16 @@ It does not matter what you leave beyond the returned k
 
 Approach:
 
-    1. Brute Force :
-        Using two for loops to find the indexes of duplicate numbers
-        and then using removeElement method to remove the duplicate numbers
-
-    2. Using HashMap :
+    Using HashMap :
         Using HashMap / HashSet to iterate through the array and
         store the unique values and if duplicate numbers are incountered
         store the indexes of the duplicate numbers.
 
-    3. Maybe Fast Slow Pointer :
-        afslfaskfjsaogrnsfdnrgf
  */
 
 
 package Java.Easy;
-
+import java.util.*;
 public class LC26 {
     public static int[] removeElement(int[] array, int index) {
         if (index < 0 || index >= array.length) {
@@ -60,6 +54,24 @@ public class LC26 {
         return newArray;
     }
 
+    public static int[] duplicateElement(int[] array){
+        HashMap<Integer, Integer> elements = new HashMap<>(); 
+        int i = 0;
+        while (i < array.length) {
+            if(elements.containsKey(array[i])){
+                array = removeElement(array, i);
+            } else {
+                elements.put(array[i], i);
+                i++;
+            }
+            
+        }
+        return array;
+    }
 
-
+    public static void main(String[] args) {
+        int arr[] = {1,1,2,3,4,2,3,4};
+        int[] result = duplicateElement(arr);
+        System.out.println(Arrays.toString(result));
+    }
 }
